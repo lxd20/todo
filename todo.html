@@ -1,0 +1,26 @@
+</<!DOCTYPE html>
+
+<html>
+  <head>
+  <!--  Set src to be the directory of where your react is located -->
+    <script src="../../../build/react.js"></script>
+  	<script src="../../../build/react-dom.js"></script>
+
+
+  </head>
+  <body>
+      
+    <div id="target"></div>
+  	<script src = "todoHeader.js"></script>
+  	<script src = "list.js"></script>
+  	<script src = "item.js"></script>
+  	<script src = "formHandler.js"></script>
+  	<script src = "todoMain.js"></script>
+    <script type="text/javascript">
+  		React.render(React.createElement(TodoMain, null), document.getElementById("target"));
+  	</script>
+
+    </body>
+
+</html>
+
