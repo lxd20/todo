@@ -22,6 +22,9 @@ var Item = React.createClass({
       	React.findDOMNode(this.refs.completedBox).checked = this.props.itemProp.completed; 
       },
 
+      componentDidUpdate: function componentDidUpdate() {
+        React.findDOMNode(this.refs.completedBox).checked = this.props.itemProp.completed; 
+      },
 
 
       render: function render() {
@@ -41,7 +44,7 @@ var Item = React.createClass({
           	this.props.itemProp.description
           	), 
           React.createElement('p', null, "Completed ", React.createElement(
-          	'input', {type:'checkbox', ref: 'completedBox', onChange: this.handleCheckbox, value: this.props.itemProp.title, name: "completeBox"})),
+          	'input', {type:'checkbox', ref: 'completedBox', onChange: this.handleCheckbox, value: 			this.props.itemProp.title, name: "completeBox"})),
           React.createElement('button', {type: 'button', onClick: this.deleteItem}, "Delete")
           
         );
